@@ -27,11 +27,17 @@ router.post('/register', function (req, res) {
 	var expenses = req.body.expenses;
 	var savings = req.body.savings;
 	var stg1 = req.body.stg1;
+	var an1 = req.body.an1;
 	var ltg1 = req.body.ltg1;
 	var stg2 = req.body.stg2;
 	var ltg2 = req.body.ltg2;
 	var stg3 = req.body.stg3;
 	var stg4 = req.body.stg4;
+	var an2 = req.body.an2;
+	var an3 = req.body.an3;
+	var an4 = req.body.an4;
+	var lan1 = req.body.lan1;
+	var lan2 = req.body.lan2;
 
 
 	// Validation
@@ -46,11 +52,18 @@ router.post('/register', function (req, res) {
 	req.checkBody('expenses', 'Expenses is required').notEmpty();
 	req.checkBody('savings', 'Savings is required').notEmpty();
 	req.checkBody('stg1', 'Goal is required').notEmpty();
+	req.checkBody('an1', 'Amount is required').notEmpty();
 	req.checkBody('ltg1', 'Goal is required').notEmpty();
 	req.checkBody('stg2', 'Goal is required').notEmpty();
 	req.checkBody('ltg2', 'Goal is required').notEmpty();
 	req.checkBody('stg3', 'Goal is required').notEmpty();
 	req.checkBody('stg4', 'Goal is required').notEmpty();
+	req.checkBody('an1', 'Amount is required').notEmpty();
+	req.checkBody('an2', 'Amount is required').notEmpty();
+	req.checkBody('an3', 'Amount is required').notEmpty();
+	req.checkBody('an4', 'Amount is required').notEmpty();
+	req.checkBody('lan1', 'Amount is required').notEmpty();
+	req.checkBody('lan2', 'Amount is required').notEmpty();
 
 	var errors = req.validationErrors();
 
@@ -84,11 +97,17 @@ router.post('/register', function (req, res) {
 						expenses: expenses,
 						savings: savings,
 						stg1: stg1,
+						an1: an1,
 						ltg1: ltg1,
 						stg2: stg2,
 						ltg2: ltg2,
 						stg3: stg3,
 						stg4: stg4,
+						an2: an2,
+						an3: an3,
+						an4: an4,
+						lan1: lan1,
+						lan2: lan2,
 					});
 					User.createUser(newUser, function (err, user) {
 						if (err) throw err;

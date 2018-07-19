@@ -31,6 +31,9 @@ var UserSchema = mongoose.Schema({
 	ltg1: {
 		type: String
 	},
+	an1: {
+		type: String
+	},
 	ltg2: {
 		type: String
 	},
@@ -44,6 +47,21 @@ var UserSchema = mongoose.Schema({
 		type: String
 	},
 	stg4: {
+		type: String
+	},
+	an2: {
+		type: String
+	},
+	an3: {
+		type: String
+	},
+	an4: {
+		type: String
+	},
+	lan1: {
+		type: String
+	},
+	lan2: {
 		type: String
 	},
 });
