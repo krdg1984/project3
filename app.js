@@ -11,7 +11,11 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
+<<<<<<< HEAD
 mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost/redakt00');
+=======
+mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost/redaktuser');
+>>>>>>> f73e91b87b886bb3dd7ae316406e0acdeb3df921
 var db = mongoose.connection;
 
 var routes = require('./routes/index');
