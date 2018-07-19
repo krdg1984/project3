@@ -1,17 +1,7 @@
  {{# each content }}
  
  <h2>Welcome {{ this.name }}</h2>
- 
 
-
-  
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
-      
-      
       
       <div class="content">
         <div class="container-fluid">
@@ -27,12 +17,13 @@
                     
                   </h3>
                 </div>
-                <!--<div class="card-footer">
+                <div class="card-footer">
                   <div class="stats">
-                    <i class="material-icons text-danger">money_off</i>
-                    <a href="#pablo">Get More Space...</a>
+                    <i class="material-icons text-danger">thumb_up_alt</i>
+                    <a href="#pablo">Add Income (Random)</a>
                   </div>
-                </div>-->
+                </div>
+                
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -49,6 +40,12 @@
                     <i class="material-icons">date_range</i> Last 24 Hours
                   </div>
                 </div>-->
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons text-danger">thumb_down_alt</i>
+                    <a href="#pablo">Add Expenses</a>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -60,11 +57,11 @@
                   <p class="card-category">Annual Income</p>
                   <h3 class="card-title">{{ this.aIncome }}</h3>
                 </div>
-                <!--<div class="card-footer">
+                <div class="card-footer">
                   <div class="stats">
-                    <i class="material-icons">local_offer</i> Tracked from Github
+                    <i class="material-icons">swap_vertical_circle</i> Adjust Annual Income
                   </div>
-                </div>-->
+                </div>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -76,14 +73,91 @@
                   <p class="card-category">Current Savings</p>
                   <h3 class="card-title">{{ this.savings }}</h3>
                 </div>
-                <!--<div class="card-footer">
+                <div class="card-footer">
                   <div class="stats">
-                    <i class="material-icons">update</i> Just Updated
+                    <i class="material-icons">account_balance</i> Adjust Savings
                   </div>
-                </div>-->
+                </div>
               </div>
             </div>
           </div>
+<br>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Update Spending 
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Be sure to update your spending</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Date of Transaction</label>
+    <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="07.19.18">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Time of Entry (not required)</label>
+    <input type="time" class="form-control" id="exampleFormControlInput1" placeholder="07:00p PST">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Description</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">$</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <div class="input-group-append">
+    <span class="input-group-text">.00</span>
+  </div>
+</div>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Description</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">$</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <div class="input-group-append">
+    <span class="input-group-text">.00</span>
+  </div>
+</div>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Description</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">$</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <div class="input-group-append">
+    <span class="input-group-text">.00</span>
+  </div>
+</div>
+  </div>
+  
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
           <div class="row">
             <div class="col-md-4">
               <div class="card card-chart">
