@@ -15,7 +15,37 @@ var UserSchema = mongoose.Schema({
 	},
 	name: {
 		type: String
-	}
+	},
+	aIncome: {
+		type: String
+	},
+	income: {
+		type: String
+	},
+	expenses: {
+		type: String
+	},
+	savings: {
+		type: String
+	},
+	ltg1: {
+		type: String
+	},
+	ltg2: {
+		type: String
+	},
+	stg1: {
+		type: String
+	},
+	stg2: {
+		type: String
+	},
+	stg3: {
+		type: String
+	},
+	stg4: {
+		type: String
+	},
 });
 
 var User = module.exports = mongoose.model('User', UserSchema);

@@ -1,9 +1,18 @@
 var express = require('express');
 var router = express.Router();
+// Needed to add Mongo Schema Data
+var User = require('../models/user.js');
 
 // Get Homepage
 router.get('/', ensureAuthenticated, function(req, res){
-	res.render('index');
+	User.find(req.params.id, function(err, user) {
+	// matches handlebars with all user data
+		res.render('index', { content: user	
+	})
+	
+		
+		
+	});
 });
 
 function ensureAuthenticated(req, res, next){
